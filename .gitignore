@@ -9,8 +9,8 @@
 /.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+/db/*.pg
+/db/*.pg
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
@@ -21,7 +21,7 @@ capybara-*.html
 .rspec
 /log
 /tmp
-/db/*.sqlite3
+/db/*.pg
 /public/system
 /coverage/
 /spec/tmp
