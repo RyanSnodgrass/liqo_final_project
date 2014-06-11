@@ -1,5 +1,5 @@
 FactoryGirl.define do
-	factory :user do
+	factory :user, class: User do
 		name "John Doe"
 		birthday "1986-04-28"
 		email "john@example.com"

@@ -1,4 +1,195 @@
-%h1 Splash Page
-- if user_signed_in?
-	%a.button#site-contine{href: "#"} Continue onto the Site!
-		
+%body{"data-offset" => "0", "data-spy" => "scroll", "data-target" => "#navigation"}
+	/ Fixed navbar
+	#navigation.navbar.navbar-default.navbar-fixed-top
+		.container
+			.navbar-header
+				%button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+					%span.icon-bar
+					%span.icon-bar
+					%span.icon-bar
+				%a.navbar-brand{href: "#"}
+					%b Pratt
+			.navbar-collapse.collapse
+				%ul.nav.navbar-nav
+					%li.active
+						%a.smothscroll{href: "#home"} Home
+					%li
+						%a.smothscroll{href: "#desc"} Description
+					%li
+						%a.smothScroll{href: "#showcase"} Showcase
+					%li
+						%a.smothScroll{href: "#contact"} Contact
+			/ /.nav-collapse
+	%section#home{name: "home"}
+	#headerwrap
+		.container
+			.row.centered
+				.col-lg-12
+					%h1
+						Welcome To
+						%b Pratt
+					%h3 Show your product with this handsome theme.
+					%br/
+				.col-lg-2
+					%h5 Amazing Results
+					%p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					%img.hidden-xs.hidden-sm.hidden-md{src: "assets/img/arrow1.png"}/
+				.col-lg-8
+					%img.img-responsive{alt: "", src: "assets/img/app-bg.png"}/
+				.col-lg-2
+					%br/
+					%img.hidden-xs.hidden-sm.hidden-md{src: "assets/img/arrow2.png"}/
+					%h5 Awesome Design
+					%p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+		/ / .container
+	/ / #headerwrap
+	%section#desc{name: "desc"}
+	/ INTRO WRAP
+	#intro
+		.container
+			.row.centered
+				%h1 Designed To Excel
+				%br/
+				%br/
+				.col-lg-4
+					%img{alt: "", src: "assets/img/intro01.png"}/
+					%h3 Community
+					%p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				.col-lg-4
+					%img{alt: "", src: "assets/img/intro02.png"}/
+					%h3 Schedule
+					%p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				.col-lg-4
+					%img{alt: "", src: "assets/img/intro03.png"}/
+					%h3 Monitoring
+					%p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			%br/
+			%hr/
+		/ / .container
+	/ / #introwrap
+	/ FEATURES WRAP
+	#features
+		.container
+			.row
+				%h1.centered What's New?
+				%br/
+				%br/
+				.col-lg-6.centered
+					%img.centered{alt: "", src: "assets/img/mobile.png"}/
+				.col-lg-6
+					%h3 Some Features
+					%br/
+					/ ACCORDION
+					#accordion2.accordion.ac
+						.accordion-group
+							.accordion-heading
+								%a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", href: "#collapseOne"}
+									First Class Design
+							/ /accordion-heading
+							#collapseOne.accordion-body.collapse.in
+								.accordion-inner
+									%p It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								/ /accordion-inner
+							/ /collapse
+						/ /accordion-group
+						%br/
+						.accordion-group
+							.accordion-heading
+								%a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", href: "#collapseTwo"}
+									Retina Ready Theme
+							#collapseTwo.accordion-body.collapse
+								.accordion-inner
+									%p It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								/ /accordion-inner
+							/ /collapse
+						/ /accordion-group
+						%br/
+						.accordion-group
+							.accordion-heading
+								%a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", href: "#collapseThree"}
+									Awesome Support
+							#collapseThree.accordion-body.collapse
+								.accordion-inner
+									%p It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								/ /accordion-inner
+							/ /collapse
+						/ /accordion-group
+						%br/
+						.accordion-group
+							.accordion-heading
+								%a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", href: "#collapseFour"}
+									Responsive Design
+							#collapseFour.accordion-body.collapse
+								.accordion-inner
+									%p It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								/ /accordion-inner
+							/ /collapse
+						/ /accordion-group
+						%br/
+					/ Accordion
+		/ / .container
+	/ / #features
+	%section#showcase{name: "showcase"}
+	#showcase
+		.container
+			.row
+				%h1.centered Some Screenshots
+				%br/
+				.col-lg-8.col-lg-offset-2
+					#carousel-example-generic.carousel.slide
+						/ Indicators
+						%ol.carousel-indicators
+							%li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+							%li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+						/ Wrapper for slides
+						.carousel-inner
+							.item.active
+								%img{alt: "", src: "assets/img/item-01.png"}/
+							.item
+								%img{alt: "", src: "assets/img/item-02.png"}/
+			%br/
+			%br/
+			%br/
+		/ /container
+	%section#contact{name: "contact"}
+	#footerwrap
+		.container
+			.col-lg-5
+				%h3 Address
+				%p
+					Av. Greenville 987,
+					%br/
+					New York,
+					%br/
+					90873
+					%br/
+					United States
+			.col-lg-7
+				%h3 Drop Us A Line
+				%br/
+				%form{action: "#", enctype: "plain", method: "post", role: "form"}
+					.form-group
+						%label{for: "name1"} Your Name
+						%input#name1.form-control{name: "Name", placeholder: "Your Name", type: "name"}/
+					.form-group
+						%label{for: "email1"} Email address
+						%input#email1.form-control{name: "Mail", placeholder: "Enter email", type: "email"}/
+					.form-group
+						%label Your Text
+						%textarea.form-control{name: "Message", rows: "3"}
+					%br/
+					%button.btn.btn-large.btn-success{type: "submit"} SUBMIT
+	#c
+		.container
+			%p
+				Created by
+				%a{href: "http://www.blacktie.co"} BLACKTIE.CO
+	/
+		Bootstrap core JavaScript
+		\==================================================
+	/ Placed at the end of the document so the pages load faster
+	%script{src: "assets/js/bootstrap.js"}
+	:javascript
+		$('.carousel').carousel({
+			interval: 3500
+		})
