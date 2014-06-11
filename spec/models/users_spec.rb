@@ -10,5 +10,5 @@ describe User do
   	expect(user.email).to eq("john@example.com")
   end
 
-    # expect(User.ordered_by_last_name).to eq([chelimsky, lindeman])
+   
 end
