@@ -28,6 +28,14 @@ feature 'Home' do
 		click_button "Sign in"
 		page.has_content?('Signed in successfully.')
 	end
+	# it 'takes me to sign up' do
+	# 	visit '/'
+	# 	click_link('Sign up')
+	# 	fill_in "user[name]", with: user.name
+	# 	fill_in "user[birthday]"
+	# 	fill_in "user[email]", with: user.email
+	# 	fill_in "user[password]", with: user.password
+ #  end
 
 
 end
