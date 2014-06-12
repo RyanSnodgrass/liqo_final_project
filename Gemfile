@@ -18,7 +18,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 gem 'debugger', group: [:development, :test]
-gem 'carrierwave'
+
 group :test do
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'

@@ -1,5 +1,5 @@
 class LiquorsController < ApplicationController
-	def index
-		@liquors = Ingredient.liguor
+	def show
+		@liquor = Ingredient.find(params[:id])
 	end
 end

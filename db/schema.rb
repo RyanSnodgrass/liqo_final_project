@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610215330) do
+ActiveRecord::Schema.define(version: 20140612023241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(version: 20140610215330) do
   create_table "glasses", force: true do |t|
     t.string "name"
     t.text   "description"
-    t.string "g_avatar"
+    t.string "avatar"
   end
 
   create_table "ingredients", force: true do |t|
     t.string "name"
-    t.string "type"
+    t.string "i_type"
     t.text   "description"
-    t.string "i_avatar"
+    t.string "avatar"
   end
 
   create_table "notes", force: true do |t|
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20140610215330) do
 
   create_table "recipes", force: true do |t|
     t.string "name"
-    t.string "r_avatar"
+    t.string "avatar"
     t.text   "description"
     t.text   "preparation"
     t.string "glass_id"

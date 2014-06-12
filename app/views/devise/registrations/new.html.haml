@@ -1,25 +1,30 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  %div
-    = f.label :name
-    %br/
-    = f.text_field :name, autofocus: true
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true
-  / %div
-  /   = f.label "Please confirm your birthday"
-  /   %br/
-  /   = f.date_field :birthday, autofocus: true
-  %div
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  %div
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  %div= f.submit "Sign up"
-= render "devise/shared/links"
+.splashback
+.container
+  .row
+    .col-sm-4
+      %h2.splashtext Sign up
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+
+        = devise_error_messages!
+        %div.form-group.splashtext
+          = f.label :name
+          %br/
+          = f.text_field :name, autofocus: true, class: 'form-control'
+        %div.form-group.splashtext
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, class: 'form-control'
+        / %div
+        /   = f.label "Please confirm your birthday"
+        /   %br/
+        /   = f.date_field :birthday, autofocus: true
+        %div.form-group.splashtext
+          = f.label :password
+          %br/
+          = f.password_field :password, autocomplete: "off", class: 'form-control'
+        %div.form-group.splashtext
+          = f.label :password_confirmation
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+        %div= f.submit "Sign up"
+      = render "devise/shared/links"

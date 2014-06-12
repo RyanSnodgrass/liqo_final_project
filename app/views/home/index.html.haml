@@ -1,4 +1,8 @@
-%h1 Splash Page
-- if user_signed_in?
-	%a.button#site-contine{href: "#"} Continue onto the Site!
-		
+.splashback
+.container
+	.row
+		.col-md-4		
+			%h1.splashtext LiQo
+			- if user_signed_in?
+				%a.button#site-contine{href: "#"} Continue onto the Site!
+
