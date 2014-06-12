@@ -12,6 +12,7 @@
 require 'factory_girl'
 require 'capybara/rspec'
 require 'capybara/webkit/matchers'
+# require 'database_cleaner'
 
 
 # The `.rspec` file also contains a few flags that are not defaults but that
@@ -20,19 +21,22 @@ require 'capybara/webkit/matchers'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
+  
+
 
   Capybara.javascript_driver = :webkit
   # config.use_transactional_fixtures = false
   config.before(:each) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
+    # DatabaseCleaner.strategy = rspec.metadata[:js] ? :truncation : :transaction
+    # DatabaseCleaner.strategy = :transaction
+    # DatabaseCleaner.clean_with(:truncation)
     DatabaseCleaner.start
   end
   config.after(:each) do
     DatabaseCleaner.clean
   end
 
-  # config.include(Capybara::Webkit::RspecMatchers, :type => :feature)
+  config.include(Capybara::Webkit::RspecMatchers, :type => :feature)
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin

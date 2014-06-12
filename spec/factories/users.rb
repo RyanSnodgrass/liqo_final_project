@@ -1,14 +1,14 @@
 FactoryGirl.define do
 	factory :user, class: User do
-		name "John Doe"
+		name "Ryan Snodgrass"
 		birthday "1986-04-28"
-		email "john@example.com"
+		email "res0428@yahoo.com"
 		password "password"
 		password_confirmation "password"
 	end
 	factory :underage_user, class: User do
-		name "Jimmy Doe"
-		birthday "1999-04-28"
+		name "Little Jimmy"
+		birthday "1999-06-11"
 		email "jimmy@example.com"
 		password "password"
 		password_confirmation "password"
