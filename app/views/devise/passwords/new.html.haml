@@ -1,0 +1,15 @@
+.splashback
+.container
+	.row
+		.col-sm-12
+			%h2.splashtext Forgot your password?
+		.col-sm-6.col-md-4
+			= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+				= devise_error_messages!
+				%div.form-group.splashtext
+					= f.label :email
+					%br/
+					= f.email_field :email, autofocus: true, class: 'form-control'
+				%div= f.submit "Send me reset password instructions"
+
+			= render "devise/shared/links"
