@@ -11,14 +11,14 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'haml'
 gem 'cancancan', '~> 1.8'
 gem 'jquery-rails'
-gem 'carrierwave'
+
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 gem 'debugger', group: [:development, :test]
-
+gem 'carrierwave'
 group :test do
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'

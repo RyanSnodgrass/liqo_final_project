@@ -38,16 +38,6 @@ feature 'Home' do
   # end
 
   it 'logs me in' do
-  	# # login(user)
-   #  visit '/'
-   #  click_link('Sign up')
-   #  fill_in "user[name]", with: user.name
-   #  fill_in "user[email]", with: user.email
-   #  # select('2011/01/01', :from => 'user[birthday]')
-   #  fill_in "user[password]", with: user.password
-   #  fill_in "user[password_confirmation]", with: user.password
-   #  click_button "Sign up"
-   #  click_link "Logout"
     login(user)
 		expect(page).to have_content('Signed in successfully.')
 	end
@@ -65,7 +55,8 @@ feature 'Home' do
   # end
 
   it 'wont take me to main page without sign up' do
-  
+    visit '/users/1/liquors'
+    expect(current_path).to eq('/')
   end
 
 	
