@@ -56,7 +56,7 @@ feature 'Home' do
 
   it 'wont take me to main page without sign up' do
     visit '/users/1/liquors'
-    expect(current_path).to eq('/')
+    expect(current_path).to eq('/users/sign_in')
   end
 
 	
