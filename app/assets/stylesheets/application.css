@@ -52,7 +52,9 @@
     margin-left: -800px;   
   }
 }
-  
+.thumby-text {
+  color: gray !important; 
+}
 .logged-header {
   color: #E6E4E4;
 }
