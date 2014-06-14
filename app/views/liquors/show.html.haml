@@ -3,3 +3,4 @@
 = image_tag @liquor.avatar
 %br
 = image_tag("liquors/jack_daniels.jpg")
+= button_to "Add an App", new_user_liquor_path, method: :get, :params => {:my_param => @liquor.id}

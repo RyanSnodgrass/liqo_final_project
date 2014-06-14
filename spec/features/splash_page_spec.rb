@@ -46,19 +46,6 @@ feature 'Home' do
   #   login(user)
   #   expect(current_path).to eq('/')
   # end
-
-  # it 'takes me to main page once logged in' do
-  #   login(user)
-  #   p page.html
-  #   click_link('Continue onto the Site!')
-  #   expect(current_path).to eq('/#')
-  # end
-
-  it 'wont take me to main page without sign up' do
-    visit '/users/1/liquors'
-    expect(current_path).to eq('/users/sign_in')
-  end
-
 	
 
 

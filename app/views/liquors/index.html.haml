@@ -1,12 +1,31 @@
 .ingredientback
+= render 'nav_tabs'
+%br
+
 .container
 	.row
 		- @liquors.each do |i|
-			.col-xs-6.col-md-3
-				.panel.panel-default
-					.panel-heading
-						%h3.panel-title= i.name
-					.panel-body
-						%a.thumbnail{href: "#"}
-							= image_tag("#{i.avatar}")
-					.panel-footer See more Info
+			- if current_user.ingredients.liquors.include?(i)
+				.col-xs-6.col-md-3
+					.panel.panel-success
+						.panel-heading
+							%h3.panel-title= i.name
+						.panel-body
+							=link_to(image_tag(i.avatar, :class => "thumbnail"), user_liquors_path(:id =>i.id), :method => :post)
+							
+						.panel-footer See more Info				
+			
+			- else
+				.col-xs-6.col-md-3
+					.panel.panel-default
+						.panel-heading
+							%h3.panel-title= i.name
+						.panel-body
+							=link_to(image_tag(i.avatar, :class => "thumbnail"), user_liquors_path(:id =>i.id), :method => :post)
+							
+						.panel-footer See more Info
+//
+/ user_liquors = current_user.ingredients.liquors
+/ liquors = Ingredient.liquors
+/ shared_liquors = user_liquors & liquors
+//
