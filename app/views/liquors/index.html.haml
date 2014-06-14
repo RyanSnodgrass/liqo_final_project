@@ -11,7 +11,7 @@
 						.panel-heading
 							%h3.panel-title= i.name
 						.panel-body
-							=link_to(image_tag(i.avatar, :class => "thumbnail"), user_liquors_path(:id =>i.id), :method => :post)
+							=link_to(image_tag(i.avatar, :class => "thumbnail"), user_liquor_path(:id =>i.id), :method => :delete)
 							
 						.panel-footer See more Info				
 			

@@ -18,6 +18,13 @@ class LiquorsController < ApplicationController
 		redirect_to :back
 	end
 
+	def destroy
+		@liquor = Ingredient.find(params[:id]) # match the liquor in the db from the liquor in the view
+		@user = current_user
+		@user.ingredients.delete @liquor
+		redirect_to :back
+	end
+
 	def ingredient_params
 		params.require(:liquor).permit!
 	end
