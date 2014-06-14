@@ -20,7 +20,7 @@
 						%span.icon-bar
 						%span.icon-bar
 						%span.icon-bar
-					%a.navbar-brand{href: "#"}
+					%a.navbar-brand{href: "/"}
 						%b LiQo
 				.navbar-collapse.collapse
 					%ul.nav.navbar-nav
@@ -30,6 +30,11 @@
 							%li
 								= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'smoothscroll'
 								/ %a.smothscroll{href: destroy_user_session_path, method: :delete} Logout
+						- else
+							%li
+								= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
+							%li
+								= link_to "Login", new_user_session_path, :class => 'navbar-link'	
 					- if user_signed_in?
 						%ul.nav.navbar-nav.navbar-right
 							%li
@@ -44,13 +49,10 @@
 					%p.notice= notice
 				- if alert != nil				
 					%p.alert= alert
-				- if user_signed_in?
-					%h4 
-						Logged in as #{current_user.email}
-						
-					/ = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
-					/= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
-				- else
-					= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
-					= link_to "Login", new_user_session_path, :class => 'navbar-link'
+				/ - if user_signed_in?
+				/ 	= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
+				/ 	= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
+				/ - else
+				/ 	= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
+				/ 	= link_to "Login", new_user_session_path, :class => 'navbar-link'
 			= yield
