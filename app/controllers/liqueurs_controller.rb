@@ -21,7 +21,7 @@ class LiqueursController < ApplicationController
 
 	# matches the clicked liqueur to the db,
 	# removes it from the current_user's ingredients_users join table
-	# redirects back to previous view(should be liqueurs)
+	# redirects back to previous view(should be liqueurs index)
 	def destroy
 		@liqueur = Ingredient.find(params[:id]) # match the liqueur in the db from the liqueur in the view
 		# @user = current_user
