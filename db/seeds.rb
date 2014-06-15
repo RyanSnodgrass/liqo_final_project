@@ -1,20 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
 # i = Ingredient.create
 # i.name = 'Rum'
 # i.i_type = 'liquor'
 # i.description = 'Rum is a distilled alcoholic beverage made from sugarcane byproducts, such as molasses, or directly from sugarcane juice, by a process of fermentation and distillation. The distillate, a clear liquid, is then usually aged in oak barrels. Rum can be referred to in Spanish by descriptors such as ron viejo ("old rum") and ron anejo ("aged rum").'
 # i.avatar.store!(File.open(File.join(Rails.root, '/public/images/liquors/beefeater_gin.jpg')))
 # i.save
+
 Ingredient.delete_all
-######## Liquors
+
+############################
+######## Liquors ###########
+############################
+
 Ingredient.create(:name=>'Vodka', 
 									:i_type=>'liquor', 
 									:description=> 'Vodka is a distilled beverage composed primarily of water and ethanol, sometimes with traces of impurities and flavorings. Traditionally, vodka is made by the distillation of fermented grains or potatoes, though some modern brands use other substances, such as fruits or sugar.', 
@@ -60,7 +56,9 @@ Ingredient.create(:name=>'Scotch Whisky',
 									:i_type=>'liquor', 
 									:description=> 'By tradition and standard, Scotch Whisky uses the spelling for whisky without the "e". The distinct smoky flavor of this distilled classic is due to the malt drying process. Part of which is done over a peat-fueled fire, which allows the smoke to come in direct contact with the malt. Although smoke does define Scotch, each region of Scotland produces a different and distinct flavor characteristics. When choosing a Scotch you will find either "single malt" or "blended" on the label along with an age statement. In the case of blended, the age is that of the youngest whiskey in the blend.', 
 									:avatar=>'liquors/dewars_18.jpg')
+########################
 ##### Mixers ###########
+########################
 Ingredient.create(:name=>'Angosturas Bitters', 
 									:i_type=>'mixer', 
 									:description=> 'Angostura Bitters is made from a secret blend of rare tropical herbs and spices. It is said to contain over forty ingredients, and was developed in 1824 by Surgeon General Dr. J. Siegert who spent 4 years devising the recipe that would improve the appetites and well-being of his troops.',
@@ -137,6 +135,87 @@ Ingredient.create(:name=>'Lemons',
 									:i_type=>'mixer', 
 									:description=> "Lemons should be firm to the touch, and bright yellow with a glossy shine. Coarse skinned and large lemons tend to be thick skinned, which means you'll get less juice from them. Heavier fruits with fine-grained skin are juiciest. Avoid hard, shriveled lemons - spongy, soft lemons - those with blemishes - or those that are greenish. Lemons can normally be stored in an airy basket at room temperature for upto two weeks, however if you plan to keep them for longer period, store them in a plastic bag in a refrigerator crisper from the offset - they will keep for up to six weeks.",
 									:avatar=>'mixers/lemon.gif')
+
+##############################
+########## liqueurs ###########
+##############################
+
+Ingredient.create(:name=>'Amaretto', 
+									:i_type=>'liqueur', 
+									:description=> "Amaretto is an almond flavoured italian liqueur made with apricot pits.",
+									:avatar=>'liqueurs/amaretto.gif')
+Ingredient.create(:name=>'Blue Curacao', 
+									:i_type=>'liqueur', 
+									:description=> "Blue Curacao is a sweet blue liqueur, distilled and flavored from the dried peel of bitter oranges. It can also contain distillates of lemons and curacao fruit, sugar and wine. The Caribbean island of Curacao is host to much of the fruit used in these liqueurs.",
+									:avatar=>'liqueurs/blue_curacao.gif')
+Ingredient.create(:name=>'Chambord', 
+									:i_type=>'liqueur', 
+									:description=> "A sweet red raspberry flavored french liqueur made from black-raspberries, honey, fruits and herbs.",
+									:avatar=>'liqueurs/chambord.gif')
+Ingredient.create(:name=>'Cointreau', 
+									:i_type=>'liqueur', 
+									:description=> "A clear brandy based liqueur and type of triple sec flavored from the peel of sour and sweet oranges.",
+									:avatar=>'liqueurs/cointreau.gif')
+Ingredient.create(:name=>'Creme de Bananes', 
+									:i_type=>'liqueur', 
+									:description=> "A sweet, intensely flavored banana liqueur.",
+									:avatar=>'liqueurs/creme_de_bananes.gif')
+Ingredient.create(:name=>'Creme de Cacao', 
+									:i_type=>'liqueur', 
+									:description=> "A dark brown or clear chocolate-flavored liqueur made from the cacao seed.",
+									:avatar=>'liqueurs/creme_de_cacao.gif')
+Ingredient.create(:name=>'Creme de Menthe', 
+									:i_type=>'liqueur', 
+									:description=> "A sweet, white/green mint-flavored liqueur made from mint and spearmint.",
+									:avatar=>'liqueurs/creme_de_menthe.gif')
+Ingredient.create(:name=>'Frangelico', 
+									:i_type=>'liqueur', 
+									:description=> "A hazelnut flavored liqueur made primarily from the distillation of the infusion of toasted hazelnuts into alcohol and water. It is flavored with toasted coffee and cocoa, vanilla berries and rhubard root.",
+									:avatar=>'liqueurs/frangelico.gif')
+Ingredient.create(:name=>'Godiva', 
+									:i_type=>'liqueur', 
+									:description=> "A rich chocolate liqueur based on godiva chocolates. Available as white chocolate or dark chocolate liqueurs.",
+									:avatar=>'liqueurs/godiva.gif')
+Ingredient.create(:name=>'Goldschlager', 
+									:i_type=>'liqueur', 
+									:description=> "A clear swiss cinnamon schnapps, containing 24 carrot gold leaf flakes.",
+									:avatar=>'liqueurs/goldschlager.gif')
+Ingredient.create(:name=>'Grand Marnier', 
+									:i_type=>'liqueur', 
+									:description=> "An orange flavored liqueur produced from a blend of cognac, orange peel, spices and vanilla.",
+									:avatar=>'liqueurs/grand_marnier.gif')
+Ingredient.create(:name=>'Jagermeister', 
+									:i_type=>'liqueur', 
+									:description=> "A herbal-flavored bitter german liqueur, made from a blend of over 50 herbs, fruits and spices.",
+									:avatar=>'liqueurs/jagermeister.gif')
+Ingredient.create(:name=>'Kahlua', 
+									:i_type=>'liqueur', 
+									:description=> "Kahlua is a rich, dark brown coffee liqueur made from the finest Mexican coffee, with fine cane spirits and a hint of vanilla. It also contains sugar, corn syrup and vodka, and has a thicker body than most other alcoholic beverages.Kahlua is the 2nd largest single liqueur brand worldwide. Although it wasn't introduced to America until 1962, it's history dates to pre-WWII.",
+									:avatar=>'liqueurs/kahlua.gif')
+Ingredient.create(:name=>'Midori', 
+									:i_type=>'liqueur', 
+									:description=> "Midori is a vibrant green, honeydew melon flavored liqueur launched in the US in 1978. It's high versatility and refreshing melon taste has made it an essential bar ingredient, used in world famous cocktails such as the Midori Margarita and Melonball. Produced in Mexico by Suntory, Midori Melon Liqueur is today available in more than 30 countries worldwide.",
+									:avatar=>'liqueurs/midori.gif')
+Ingredient.create(:name=>'Rumple Minze', 
+									:i_type=>'liqueur', 
+									:description=> "A strong peppermint-flavored german schnapps.",
+									:avatar=>'liqueurs/rumple_minze.gif')
+Ingredient.create(:name=>'Sambuca', 
+									:i_type=>'liqueur', 
+									:description=> "Sambuca is an anise-flavored liqueur, produced by the infusion of witch elder bush and licorice, sweetened with sugar and enhanced with a secret combination of herbs and spices. White Sambuca is the traditional and generally the more popular variety, having a mellower licorice taste and lighter body than that of black sambuca.",
+									:avatar=>'liqueurs/sambuca.gif')
+Ingredient.create(:name=>'Southern Comfort', 
+									:i_type=>'liqueur', 
+									:description=> "Southern Comfort is a peach flavored bourbon liqueur. It is a traditional american spirit made from an infusion of peach and other flavorings (such as citrus and orange) into a bourbon base. It is available as both 100 proof (50 percent alcohol) and 76 proof (38 percent alcohol). Although nowadays produced in St. Louis, Missouri, the history and secret formula of Southern Comfort stretches back to 1874 where a M.W. Heron created it in his bar in New Orleans.",
+									:avatar=>'liqueurs/soco.gif')
+Ingredient.create(:name=>'Tia Maria', 
+									:i_type=>'liqueur', 
+									:description=> "A dark, medium-bodied coffee liqueur made from a fine blend of cane spirit, jamaican coffee, vanilla and sugar.",
+									:avatar=>'liqueurs/tia_maria.gif')
+Ingredient.create(:name=>'Triple Sec', 
+									:i_type=>'liqueur', 
+									:description=> "Triple sec (meaning 'Triple distilled') is a strong, sweet and colorless orange flavored liqueur. It is made from the dried peel of oranges found on Curacao, an island in the Caribbean. Curacao, Grand Marnier and Cointreau are popular triple sec's.",
+									:avatar=>'liqueurs/triple_sec.gif')
   # create_table "ingredients", force: true do |t|
   #   t.string "name"
   #   t.string "type"

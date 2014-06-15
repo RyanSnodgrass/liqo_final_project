@@ -7,5 +7,5 @@ class Ingredient < ActiveRecord::Base
 
 	scope :liquors, -> { where(i_type: 'liquor')}
 	scope :mixers,  -> { where(i_type: 'mixer') }
-	scope :liqeurs, -> { where(i_type: 'liqeur') }
+	scope :liqueurs, -> { where(i_type: 'liqueur') }
 end
