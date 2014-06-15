@@ -11,10 +11,10 @@ class LiqueursController < ApplicationController
 	# redirects back to previous view(should be liqueurs)
 	def create
 		@liqueur = Ingredient.find(params[:id]) # match the liqueur in the db from the liqueur in the view
-		@user = current_user # set the current user
+		# @user = current_user # set the current user
 		# @user.ingredients.build
 		# debugger
-		@user.ingredients << @liqueur
+		current_user.ingredients << @liqueur
 		# debugger
 		redirect_to :back
 	end
@@ -24,8 +24,8 @@ class LiqueursController < ApplicationController
 	# redirects back to previous view(should be liqueurs)
 	def destroy
 		@liqueur = Ingredient.find(params[:id]) # match the liqueur in the db from the liqueur in the view
-		@user = current_user
-		@user.ingredients.delete @liqueur
+		# @user = current_user
+		current_user.ingredients.delete @liqueur
 		redirect_to :back
 	end
 
