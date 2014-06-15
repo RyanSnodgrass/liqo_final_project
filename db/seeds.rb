@@ -226,9 +226,16 @@ Ingredient.create(:name=>'Triple Sec',
 									:i_type=>'liqueur', 
 									:description=> "Triple sec (meaning 'Triple distilled') is a strong, sweet and colorless orange flavored liqueur. It is made from the dried peel of oranges found on Curacao, an island in the Caribbean. Curacao, Grand Marnier and Cointreau are popular triple sec's.",
 									:avatar=>'liqueurs/triple_sec.gif')
-  # create_table "ingredients", force: true do |t|
+
+  # create_table "recipes", force: true do |t|
   #   t.string "name"
-  #   t.string "type"
+  #   t.string "avatar"
   #   t.text   "description"
-  #   t.string "i_avatar"
+  #   t.text   "preparation"
+  #   t.string "glass_id"
+  # end
+
+  # create_table "recipes_ingredients", id: false, force: true do |t|
+  #   t.integer "recipe_id"
+  #   t.integer "ingredient_id"
   # end
