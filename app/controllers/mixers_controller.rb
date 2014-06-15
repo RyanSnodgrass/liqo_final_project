@@ -7,7 +7,7 @@ class MixersController < ApplicationController
 	end
 
 	# matches the clicked mixer to the db,
-	# adds it to the current_user's ingredients_users join table
+	# pushes it to the current_user's ingredients_users join table
 	# redirects back to previous view(should be mixers)
 	def create
 		@mixer = Ingredient.find(params[:id]) # match the mixer in the db from the mixer in the view

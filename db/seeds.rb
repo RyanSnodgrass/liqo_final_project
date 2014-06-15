@@ -56,9 +56,11 @@ Ingredient.create(:name=>'Scotch Whisky',
 									:i_type=>'liquor', 
 									:description=> 'By tradition and standard, Scotch Whisky uses the spelling for whisky without the "e". The distinct smoky flavor of this distilled classic is due to the malt drying process. Part of which is done over a peat-fueled fire, which allows the smoke to come in direct contact with the malt. Although smoke does define Scotch, each region of Scotland produces a different and distinct flavor characteristics. When choosing a Scotch you will find either "single malt" or "blended" on the label along with an age statement. In the case of blended, the age is that of the youngest whiskey in the blend.', 
 									:avatar=>'liquors/dewars_18.jpg')
+
 ########################
 ##### Mixers ###########
 ########################
+
 Ingredient.create(:name=>'Angosturas Bitters', 
 									:i_type=>'mixer', 
 									:description=> 'Angostura Bitters is made from a secret blend of rare tropical herbs and spices. It is said to contain over forty ingredients, and was developed in 1824 by Surgeon General Dr. J. Siegert who spent 4 years devising the recipe that would improve the appetites and well-being of his troops.',
@@ -103,6 +105,14 @@ Ingredient.create(:name=>'Sour Mix',
 									:i_type=>'mixer', 
 									:description=> "Sweet and sour mix is a blend of lemon juice and syrup. It is often just refered to as sour mix, and is available at most liquor stores. To make your own, mix approx. eight ounces of lemon juice with two tablespoons of sugar.",
 									:avatar=>'mixers/sour_mix.gif')
+Ingredient.create(:name=>'Lime Juice', 
+									:i_type=>'mixer', 
+									:description=> "Normally best freshly squeezed, Lime Juice is an essential ingredient for cocktails. To get the most juice out of a fresh lime, bring it to room temperature and roll it under your palm against a hard surface before squeezing. Another method is to microwave them on high power for 30 seconds, let stand a couple of minutes before cutting and squeezing them.",
+									:avatar=>'mixers/lime_juice.gif')
+Ingredient.create(:name=>'Lemon Juice', 
+									:i_type=>'mixer', 
+									:description=> "Normally best freshly squeezed, Lemon Juice is an essential ingredient for cocktails. To get the most juice out of a fresh lemon, bring it to room temperature and roll it under your palm against a hard surface before squeezing. Another method is to microwave them on high power for 30 seconds, let stand a couple of minutes before cutting and squeezing them.",
+									:avatar=>'mixers/lemon_juice.gif')
 Ingredient.create(:name=>'Sprite', 
 									:i_type=>'mixer', 
 									:description=> "Sprite is a lemon-lime flavored carbonated soft drink produced by the Coca-Cola Company. It is caffeine free and contains no fat. Sprite has a taste similar to that of 7-Up. It is often common practice to substitute one for the other.",
@@ -216,9 +226,16 @@ Ingredient.create(:name=>'Triple Sec',
 									:i_type=>'liqueur', 
 									:description=> "Triple sec (meaning 'Triple distilled') is a strong, sweet and colorless orange flavored liqueur. It is made from the dried peel of oranges found on Curacao, an island in the Caribbean. Curacao, Grand Marnier and Cointreau are popular triple sec's.",
 									:avatar=>'liqueurs/triple_sec.gif')
-  # create_table "ingredients", force: true do |t|
+
+  # create_table "recipes", force: true do |t|
   #   t.string "name"
-  #   t.string "type"
+  #   t.string "avatar"
   #   t.text   "description"
-  #   t.string "i_avatar"
+  #   t.text   "preparation"
+  #   t.string "glass_id"
+  # end
+
+  # create_table "recipes_ingredients", id: false, force: true do |t|
+  #   t.integer "recipe_id"
+  #   t.integer "ingredient_id"
   # end
