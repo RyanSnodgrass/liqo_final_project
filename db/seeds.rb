@@ -125,6 +125,10 @@ Ingredient.create(:name=>'Lemon Juice',
 									:i_type=>'mixer', 
 									:description=> "Normally best freshly squeezed, Lemon Juice is an essential ingredient for cocktails. To get the most juice out of a fresh lemon, bring it to room temperature and roll it under your palm against a hard surface before squeezing. Another method is to microwave them on high power for 30 seconds, let stand a couple of minutes before cutting and squeezing them.",
 									:avatar=>'mixers/lemon_juice.gif')
+Ingredient.create(:name=>'Orange Juice', 
+									:i_type=>'mixer', 
+									:description=> "",
+									:avatar=>'mixers/orange_juice.gif')
 Ingredient.create(:name=>'Sprite', 
 									:i_type=>'mixer', 
 									:description=> "Sprite is a lemon-lime flavored carbonated soft drink produced by the Coca-Cola Company. It is caffeine free and contains no fat. Sprite has a taste similar to that of 7-Up. It is often common practice to substitute one for the other.",
@@ -262,14 +266,14 @@ Recipe.create(:name=> 'Amaretto Sour',
 							:preparation=>'Pour the amaretto liqueur into a cocktail shaker half-filled with ice cubes. Add a splash or two of sweet and sour mix, and shake well. Strain or pour into an old-fashioned glass, garnish with a maraschino cherry and a slice of orange, and serve.'
 							# :avatar=>''
 							)
-IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
-											ingredient_id: Ingredient.find_by_name("Amaretto").id,
-											amount: "1.5 oz"
-											)
-IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
-											ingredient_id: Ingredient.find_by_name("Sour Mix").id,
-											amount: "1 - 2 splashes"
-											)
+# IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
+# 											ingredient_id: Ingredient.find_by_name("Amaretto").id,
+# 											amount: "1.5 oz"
+# 											)
+# IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
+# 											ingredient_id: Ingredient.find_by_name("Sour Mix").id,
+# 											amount: "1 - 2 splashes"
+# 											)
 Recipe.create(:name=> 'B-52',
 							# :description=>''
 							:preparation=>'Carefully layer ingredients, in order, into a shot glass; kahlua, amaretto, then irish cream.'
@@ -519,7 +523,7 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
 											amount: "1 part"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
-											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											ingredient_id: Ingredient.find_by_name("White Tequila").id,
 											amount: "1 part"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
@@ -549,7 +553,7 @@ Recipe.create(:name=> 'Margarita',
 							# :avatar=>''
 							)
 IngredientList.create(recipe_id: Recipe.find_by_name("Margarita").id,
-											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											ingredient_id: Ingredient.find_by_name("White Tequila").id,
 											amount: "1.5 oz"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Margarita").id,
@@ -621,7 +625,7 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Old Fashioned").id,
 											amount: "1 dash"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Old Fashioned").id,
-											ingredient_id: Ingredient.find_by_name("Lemon").id,
+											ingredient_id: Ingredient.find_by_name("Lemons").id,
 											amount: "1 slice"
 											)
 
@@ -764,7 +768,7 @@ Recipe.create(:name=> 'Tequila Sunrise',
 							# :avatar=>''
 							)
 IngredientList.create(recipe_id: Recipe.find_by_name("Tequila Sunrise").id,
-											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											ingredient_id: Ingredient.find_by_name("Gold Tequila").id,
 											amount: "2 oz"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Tequila Sunrise").id,

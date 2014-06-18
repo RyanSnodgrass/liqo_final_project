@@ -4,7 +4,9 @@ class Ingredient < ActiveRecord::Base
 
 	has_and_belongs_to_many :users
 	# has_and_belongs_to_many :recipes
+	has_many :ingredient_lists
 	has_many :recipes, through: :ingredient_lists 
+
 
 	scope :liquors, -> { where(i_type: 'liquor')}
 	scope :mixers,  -> { where(i_type: 'mixer') }
