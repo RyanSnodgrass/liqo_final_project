@@ -266,14 +266,14 @@ Recipe.create(:name=> 'Amaretto Sour',
 							:preparation=>'Pour the amaretto liqueur into a cocktail shaker half-filled with ice cubes. Add a splash or two of sweet and sour mix, and shake well. Strain or pour into an old-fashioned glass, garnish with a maraschino cherry and a slice of orange, and serve.'
 							# :avatar=>''
 							)
-# IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
-# 											ingredient_id: Ingredient.find_by_name("Amaretto").id,
-# 											amount: "1.5 oz"
-# 											)
-# IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
-# 											ingredient_id: Ingredient.find_by_name("Sour Mix").id,
-# 											amount: "1 - 2 splashes"
-# 											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
+											ingredient_id: Ingredient.find_by_name("Amaretto").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
+											ingredient_id: Ingredient.find_by_name("Sour Mix").id,
+											amount: "1 - 2 splashes"
+											)
 Recipe.create(:name=> 'B-52',
 							# :description=>''
 							:preparation=>'Carefully layer ingredients, in order, into a shot glass; kahlua, amaretto, then irish cream.'
