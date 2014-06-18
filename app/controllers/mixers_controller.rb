@@ -1,4 +1,5 @@
 class MixersController < ApplicationController
+	before_action :authenticate_user!
 	def index
 		@mixers = Ingredient.mixers
 	end

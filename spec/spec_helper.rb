@@ -19,11 +19,12 @@ require 'capybara/webkit/matchers'
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   
 
-
+  
   Capybara.javascript_driver = :webkit
   # config.use_transactional_fixtures = false
   config.before(:each) do
