@@ -1,11 +1,9 @@
-# i = Ingredient.create
-# i.name = 'Rum'
-# i.i_type = 'liquor'
-# i.description = 'Rum is a distilled alcoholic beverage made from sugarcane byproducts, such as molasses, or directly from sugarcane juice, by a process of fermentation and distillation. The distillate, a clear liquid, is then usually aged in oak barrels. Rum can be referred to in Spanish by descriptors such as ron viejo ("old rum") and ron anejo ("aged rum").'
-# i.avatar.store!(File.open(File.join(Rails.root, '/public/images/liquors/beefeater_gin.jpg')))
-# i.save
-
 Ingredient.delete_all
+Recipe.delete_all
+IngredientList.delete_all
+IngredientUser.delete_all
+IngredientRecipe.delete_all
+
 
 ############################
 ######## Liquors ###########
@@ -258,8 +256,7 @@ Ingredient.create(:name=>'Dry Vermouth',
 #########################
 ######## Recipes ########
 #########################
-Recipe.delete_all
-IngredientList.delete_all
+
 
 Recipe.create(:name=> 'Amaretto Sour',
 							# :description=>''

@@ -1,4 +1,4 @@
-class Ingredient < ActiveRecord::Base
+  class Ingredient < ActiveRecord::Base
 	require 'carrierwave/orm/activerecord'
 	# mount_uploader :avatar, AvatarUploader
 
