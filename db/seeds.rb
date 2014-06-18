@@ -668,6 +668,113 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Purple Hooter").id,
 											ingredient_id: Ingredient.find_by_name("7-up").id,
 											amount: "1 splash"
 											)
+
+Recipe.create(:name=> 'Rob Roy',
+							# :description=>''
+							:preparation=>"Stir ingredients with ice, strain into a cocktail glass, and serve."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Rob Roy").id,
+											ingredient_id: Ingredient.find_by_name("Scotch Whisky").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Rob Roy").id,
+											ingredient_id: Ingredient.find_by_name("Sweet Vermouth").id,
+											amount: "3/4 oz"
+											)
+
+Recipe.create(:name=> 'Rum Runner',
+							# :description=>''
+							:preparation=>"Add Captain Morgan Original Spiced Rum, blackberry liqueur, crème de banana liqueur, 2 oz orange juice, grenadine, and crushed ice in a blender. Blend until slushy and pour into glass."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Rum Runner").id,
+											ingredient_id: Ingredient.find_by_name("Captain Morgan").id,
+											amount: "3/4 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Rum Runner").id,
+											ingredient_id: Ingredient.find_by_name("Chambord").id,
+											amount: ".25 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Rum Runner").id,
+											ingredient_id: Ingredient.find_by_name("Creme de Bananes").id,
+											amount: ".25 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Rum Runner").id,
+											ingredient_id: Ingredient.find_by_name("Creme de Bananes").id,
+											amount: ".25 oz"
+											)
+
+Recipe.create(:name=> 'Salty Dog',
+							# :description=>''
+							:preparation=>"Pour all ingredients plus 1/4 tsp salt over ice cubes in a highball glass. Stir well and serve. (Vodka may be substituted for gin, if preferred.)"
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Salty Dog").id,
+											ingredient_id: Ingredient.find_by_name("Gin").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Salty Dog").id,
+											ingredient_id: Ingredient.find_by_name("Grapefruit Juice").id,
+											amount: "5 oz"
+											)
+Recipe.create(:name=> 'Seabreeze',
+							# :description=>''
+							:preparation=>"Pour vodka over ice into highball glass. Add mixers. May be garnished with a wedge of lime."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Seabreeze").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Seabreeze").id,
+											ingredient_id: Ingredient.find_by_name("Cranberry Juice").id,
+											amount: "4 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Seabreeze").id,
+											ingredient_id: Ingredient.find_by_name("Grapefruit Juice").id,
+											amount: "1 oz"
+											)
+
+Recipe.create(:name=> 'Sloe Comfortable Screw',
+							# :description=>''
+							:preparation=>"Stir or shake ingredients & serve with ice."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Sloe Comfortable Screw").id,
+											ingredient_id: Ingredient.find_by_name("Gin").id,
+											amount: "1 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Sloe Comfortable Screw").id,
+											ingredient_id: Ingredient.find_by_name("Southern Comfort").id,
+											amount: "1 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Sloe Comfortable Screw").id,
+											ingredient_id: Ingredient.find_by_name("Orange Juice").id,
+											amount: "1 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Sloe Comfortable Screw").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: "1 oz"
+											)
+
+Recipe.create(:name=> 'Tequila Sunrise',
+							# :description=>''
+							:preparation=>"Pour tequila in a highball glass with ice, and top with orange juice. Stir. Add grenadine by tilting glass and pouring grenadine down side by flipping the bottle vertically very quickly. The grenadine should go straight to the bottom and then rise up slowly through the drink. Garnish stirrer, straw and cherry-orange."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Tequila Sunrise").id,
+											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											amount: "2 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Tequila Sunrise").id,
+											ingredient_id: Ingredient.find_by_name("Orange Juice").id,
+											amount: "1 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Tequila Sunrise").id,
+											ingredient_id: Ingredient.find_by_name("Grenadine").id,
+											amount: "2 dashes"
+											)
 # r.ingredients << Ingredient.find_by_name("Amaretto")
 # r.ingredients << Ingredient.find_by_name("Sour Mix")
 
@@ -677,15 +784,3 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Purple Hooter").id,
 # 							# :avatar=>''
 # 							)
   
-  # create_table "recipes", force: true do |t|
-  #   t.string "name"
-  #   t.string "avatar"
-  #   t.text   "description"
-  #   t.text   "preparation"
-  #   t.string "glass_id"
-  # end
-
-  # create_table "recipes_ingredients", id: false, force: true do |t|
-  #   t.integer "recipe_id"
-  #   t.integer "ingredient_id"
-  # end
