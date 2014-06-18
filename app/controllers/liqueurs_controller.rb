@@ -1,4 +1,5 @@
 class LiqueursController < ApplicationController
+	before_action :authenticate_user!
 	def index
 		@liqueurs = Ingredient.liqueurs
 	end

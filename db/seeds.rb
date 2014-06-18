@@ -89,6 +89,10 @@ Ingredient.create(:name=>'Grenadine',
 									:i_type=>'mixer', 
 									:description=> "Grenadine is a strong red syrup made from red currants and pomegranates. It is a useful ingredient for many cocktails - acting as both a colouring and sweetener.",
 									:avatar=>'mixers/grenadine.gif')
+Ingredient.create(:name=>'Half and Half', 
+									:i_type=>'mixer', 
+									:description=> "",
+									:avatar=>'mixers/grenadine.gif')
 Ingredient.create(:name=>'Ice Cream', 
 									:i_type=>'mixer', 
 									:description=> "A cold dessert made with a combination of milk products, sweeteners and flavorings.",
@@ -109,6 +113,10 @@ Ingredient.create(:name=>'Lime Juice',
 									:i_type=>'mixer', 
 									:description=> "Normally best freshly squeezed, Lime Juice is an essential ingredient for cocktails. To get the most juice out of a fresh lime, bring it to room temperature and roll it under your palm against a hard surface before squeezing. Another method is to microwave them on high power for 30 seconds, let stand a couple of minutes before cutting and squeezing them.",
 									:avatar=>'mixers/lime_juice.gif')
+Ingredient.create(:name=>'Cranberry Juice', 
+									:i_type=>'mixer', 
+									:description=> "",
+									:avatar=>'mixers/cranberry_juice.gif')
 Ingredient.create(:name=>'Lemon Juice', 
 									:i_type=>'mixer', 
 									:description=> "Normally best freshly squeezed, Lemon Juice is an essential ingredient for cocktails. To get the most juice out of a fresh lemon, bring it to room temperature and roll it under your palm against a hard surface before squeezing. Another method is to microwave them on high power for 30 seconds, let stand a couple of minutes before cutting and squeezing them.",
@@ -151,6 +159,10 @@ Ingredient.create(:name=>'Lemons',
 ##############################
 
 Ingredient.create(:name=>'Amaretto', 
+									:i_type=>'liqueur', 
+									:description=> "Amaretto is an almond flavoured italian liqueur made with apricot pits.",
+									:avatar=>'liqueurs/amaretto.gif')
+Ingredient.create(:name=>"Bailey's", 
 									:i_type=>'liqueur', 
 									:description=> "Amaretto is an almond flavoured italian liqueur made with apricot pits.",
 									:avatar=>'liqueurs/amaretto.gif')
@@ -226,7 +238,181 @@ Ingredient.create(:name=>'Triple Sec',
 									:i_type=>'liqueur', 
 									:description=> "Triple sec (meaning 'Triple distilled') is a strong, sweet and colorless orange flavored liqueur. It is made from the dried peel of oranges found on Curacao, an island in the Caribbean. Curacao, Grand Marnier and Cointreau are popular triple sec's.",
 									:avatar=>'liqueurs/triple_sec.gif')
+Ingredient.create(:name=>'Sweet Vermouth', 
+									:i_type=>'liqueur', 
+									:description=> "",
+									:avatar=>'')
+Ingredient.create(:name=>'Dry Vermouth', 
+									:i_type=>'liqueur', 
+									:description=> "",
+									:avatar=>'')
 
+#########################
+######## Recipes ########
+#########################
+Recipe.delete_all
+IngredientList.delete_all
+
+Recipe.create(:name=> 'Amaretto Sour',
+							# :description=>''
+							:preparation=>'Pour the amaretto liqueur into a cocktail shaker half-filled with ice cubes. Add a splash or two of sweet and sour mix, and shake well. Strain or pour into an old-fashioned glass, garnish with a maraschino cherry and a slice of orange, and serve.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
+											ingredient_id: Ingredient.find_by_name("Amaretto").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Amaretto Sour").id,
+											ingredient_id: Ingredient.find_by_name("Sour Mix").id,
+											amount: "1 - 2 splashes"
+											)
+Recipe.create(:name=> 'B-52',
+							# :description=>''
+							:preparation=>'Carefully layer ingredients, in order, into a shot glass; kahlua, amaretto, then irish cream.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("B-52").id,
+											ingredient_id: Ingredient.find_by_name("Kahlua").id,
+											amount: "1/3 Shot"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("B-52").id,
+											ingredient_id: Ingredient.find_by_name("Amaretto").id,
+											amount: "1/3 Shot"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("B-52").id,
+											ingredient_id: Ingredient.find_by_name("Bailey's").id,
+											amount: "1/3 Shot"
+											)
+
+Recipe.create(:name=> 'Brandy Alexander',
+							# :description=>''
+							:preparation=>'In a shaker half-filled with ice cubes, combine the brandy, creme de cacao, and half-and-half. Shake well. Strain into a cocktail glass and garnish with nutmeg.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Brandy Alexander").id,
+											ingredient_id: Ingredient.find_by_name("Brandy").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Brandy Alexander").id,
+											ingredient_id: Ingredient.find_by_name("Creme de Cacao").id,
+											amount: "1 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Brandy Alexander").id,
+											ingredient_id: Ingredient.find_by_name("Half and Half").id,
+											amount: "1 oz"
+											)
+
+Recipe.create(:name=> 'Bloody Mary',
+							# :description=>''
+							:preparation=>'Add Smirnoff No.21 Vodka, tomato juice, red hot sauce, green hot sauce, worchester sauce, lemon juice, pinch of salt, pinch of pepper. Pour back and forth between two mixing glasses. Strain into an ice-filled highball glass. Garnish with celery stalk.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Bloody Mary").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: "1 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Bloody Mary").id,
+											ingredient_id: Ingredient.find_by_name("Lemon Juice").id,
+											amount: "1 oz"
+											)
+Recipe.create(:name=> 'Blow Job',
+							# :description=>''
+							:preparation=>'Pour liqueurs into a shot glass and top with whipped cream. Have an individual place their hands behind their back, then; pick-up the filled shot glass with their mouth, tilt head back, and drink.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Blow Job").id,
+											ingredient_id: Ingredient.find_by_name("Bailey's").id,
+											amount: "1/4 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Blow Job").id,
+											ingredient_id: Ingredient.find_by_name("Amaretto").id,
+											amount: "1/2 oz"
+											)
+
+Recipe.create(:name=> 'Colorado Bulldog',
+							# :description=>''
+							:preparation=>'In a shaker mix Vodka, Kahlua, and milk. Pour into a rocks glass and add a splash of Coca-Cola.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Colorado Bulldog").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: "1 Shot"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Colorado Bulldog").id,
+											ingredient_id: Ingredient.find_by_name("Kahlua").id,
+											amount: "1 Shot"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Colorado Bulldog").id,
+											ingredient_id: Ingredient.find_by_name("Milk").id,
+											amount: ""
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Colorado Bulldog").id,
+											ingredient_id: Ingredient.find_by_name("Cola").id,
+											amount: "1 splash"
+											)
+
+Recipe.create(:name=> 'Cosmopolitan',
+							# :description=>''
+							:preparation=>'Shake vodka, triple sec, lime and cranberry juice vigorously in a shaker with ice. Strain into a martini glass, garnish with a lime wedge on the rim, and serve.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Cosmopolitan").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: "1 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Cosmopolitan").id,
+											ingredient_id: Ingredient.find_by_name("Triple Sec").id,
+											amount: "1/2 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Cosmopolitan").id,
+											ingredient_id: Ingredient.find_by_name("Lime Juice").id,
+											amount: "1/2 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Cosmopolitan").id,
+											ingredient_id: Ingredient.find_by_name("Cranberry Juice").id,
+											amount: "1/2 oz"
+											)
+
+Recipe.create(:name=> 'Cuba Libre',
+							# :description=>''
+							:preparation=>'Pour lime juice into a highball glass over ice cubes. Add rum, fill with cola, stir, and serve.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Cuba Libre").id,
+											ingredient_id: Ingredient.find_by_name("Rum").id,
+											amount: "2 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Cuba Libre").id,
+											ingredient_id: Ingredient.find_by_name("Limes").id,
+											amount: "Juice of half"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Cuba Libre").id,
+											ingredient_id: Ingredient.find_by_name("Cola").id,
+											amount: ""
+											)
+
+Recipe.create(:name=> 'Gibson',
+							# :description=>''
+							:preparation=>'Stir gin and vermouth over ice cubes in a mixing glass. Strain into a cocktail glass. Add 2 cocktail onions and serve.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Gibson").id,
+											ingredient_id: Ingredient.find_by_name("Gin").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Gibson").id,
+											ingredient_id: Ingredient.find_by_name("Dry Vermouth").id,
+											amount: "3/4 oz"
+											)
+# r.ingredients << Ingredient.find_by_name("Amaretto")
+# r.ingredients << Ingredient.find_by_name("Sour Mix")
+
+# Recipe.create(:name=> 'Alabama Slammer'
+# 							:description=>''
+# 							:preparation=>'Pour ingredients into a stainless steel shaker over ice and shake until completely cold. Strain into an old-fashioned glass and serve.'
+# 							# :avatar=>''
+# 							)
+  
   # create_table "recipes", force: true do |t|
   #   t.string "name"
   #   t.string "avatar"
