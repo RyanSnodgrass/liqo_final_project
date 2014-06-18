@@ -117,6 +117,10 @@ Ingredient.create(:name=>'Cranberry Juice',
 									:i_type=>'mixer', 
 									:description=> "",
 									:avatar=>'mixers/cranberry_juice.gif')
+Ingredient.create(:name=>'Grapefruit Juice', 
+									:i_type=>'mixer', 
+									:description=> "",
+									:avatar=>'mixers/grapefruit_juice.gif')
 Ingredient.create(:name=>'Lemon Juice', 
 									:i_type=>'mixer', 
 									:description=> "Normally best freshly squeezed, Lemon Juice is an essential ingredient for cocktails. To get the most juice out of a fresh lemon, bring it to room temperature and roll it under your palm against a hard surface before squeezing. Another method is to microwave them on high power for 30 seconds, let stand a couple of minutes before cutting and squeezing them.",
@@ -403,6 +407,266 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Gibson").id,
 IngredientList.create(recipe_id: Recipe.find_by_name("Gibson").id,
 											ingredient_id: Ingredient.find_by_name("Dry Vermouth").id,
 											amount: "3/4 oz"
+											)
+
+Recipe.create(:name=> 'Gimlet',
+							# :description=>''
+							:preparation=>'Pour the gin and lime juice into a mixing glass half-filled with ice cubes. Stir well. Strain into a cocktail glass and garnish with lime wedge.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Gimlet").id,
+											ingredient_id: Ingredient.find_by_name("Gin").id,
+											amount: "1.25 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Gimlet").id,
+											ingredient_id: Ingredient.find_by_name("Lime Juice").id,
+											amount: "1 oz"
+											)
+
+Recipe.create(:name=> 'Godiva Chocolate Martini',
+							# :description=>''
+							:preparation=>'Mix all ingredients in a shaker with ice, shake and pour into a chilled cocktail glass.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Godiva Chocolate Martini").id,
+											ingredient_id: Ingredient.find_by_name("Godiva").id,
+											amount: "1.5 shots"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Godiva Chocolate Martini").id,
+											ingredient_id: Ingredient.find_by_name("Creme de Cacao").id,
+											amount: "1.5 shots"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Godiva Chocolate Martini").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: ".5 shot"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Godiva Chocolate Martini").id,
+											ingredient_id: Ingredient.find_by_name("Cream").id,
+											amount: "1.5 shots"
+											)
+
+Recipe.create(:name=> 'Grasshopper',
+							# :description=>''
+							:preparation=>'Shake all ingredients with ice, strain into a cocktail glass, and serve.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Grasshopper").id,
+											ingredient_id: Ingredient.find_by_name("Creme de Menthe").id,
+											amount: "3/4 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Grasshopper").id,
+											ingredient_id: Ingredient.find_by_name("Creme de Cacao").id,
+											amount: "3/4 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Grasshopper").id,
+											ingredient_id: Ingredient.find_by_name("Cream").id,
+											amount: "3/4 oz"
+											)
+
+Recipe.create(:name=> 'Greyhound',
+							# :description=>''
+							:preparation=>'Pour ingredients into a highball glass over ice cubes. Stir well and serve. (Vodka may be substituted for gin, if preferred.)'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Greyhound").id,
+											ingredient_id: Ingredient.find_by_name("Gin").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Greyhound").id,
+											ingredient_id: Ingredient.find_by_name("Grapefruit Juice").id,
+											amount: "1.5 oz"
+											)
+
+Recipe.create(:name=> 'Kamikaze',
+							# :description=>''
+							:preparation=>'Add lime juice, triple sec and Smirnoff No.21 Vodka. Shake and strain into a shot glass.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Kamikaze").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: "1.25 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Kamikaze").id,
+											ingredient_id: Ingredient.find_by_name("Triple Sec").id,
+											amount: ".25 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Kamikaze").id,
+											ingredient_id: Ingredient.find_by_name("Lime Juice").id,
+											amount: ".25 oz"
+											)
+
+Recipe.create(:name=> 'Lemon Drop',
+							# :description=>''
+							:preparation=>'Add sugar to the rim of an old-fashioned glass, and drop a cube or packet of sugar into the bottom of the glass. Pour vodka and lemon juice into a stainless steel shaker over ice, and shake until completely cold. Pour into the prepared old-fashioned glass, and serve.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Lemon Drop").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Lemon Drop").id,
+											ingredient_id: Ingredient.find_by_name("Lemon Juice").id,
+											amount: ".5 oz"
+											)
+
+Recipe.create(:name=> 'Long Island Iced Tea',
+							# :description=>''
+							:preparation=>'Mix ingredients together over ice in a glass. Pour into a shaker and give one brisk shake. Pour back into the glass and make sure there is a touch of fizz at the top. Garnish with lemon.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: "1 part"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
+											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											amount: "1 part"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
+											ingredient_id: Ingredient.find_by_name("Rum").id,
+											amount: "1 part"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
+											ingredient_id: Ingredient.find_by_name("Gin").id,
+											amount: "1 part"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
+											ingredient_id: Ingredient.find_by_name("Triple Sec").id,
+											amount: "1 part"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
+											ingredient_id: Ingredient.find_by_name("Sour Mix").id,
+											amount: "1.5 parts"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
+											ingredient_id: Ingredient.find_by_name("Cola").id,
+											amount: "1 splash"
+											)
+
+Recipe.create(:name=> 'Margarita',
+							# :description=>''
+							:preparation=>'Rum the rim of a cocktail glass with lime juice, and dip in salt. Shake all ingredients with ice, strain into the glass, and serve.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Margarita").id,
+											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Margarita").id,
+											ingredient_id: Ingredient.find_by_name("Cointreau").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Margarita").id,
+											ingredient_id: Ingredient.find_by_name("Lime Juice").id,
+											amount: "1 oz"
+											)
+
+Recipe.create(:name=> 'Martini',
+							# :description=>''
+							:preparation=>'Stir with ice cubes, and strain into a chilled cocktail glass. Garnish with an olive or a twist of lemon.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Martini").id,
+											ingredient_id: Ingredient.find_by_name("Gin").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Martini").id,
+											ingredient_id: Ingredient.find_by_name("Dry Vermouth").id,
+											amount: ".5 oz"
+											)
+
+Recipe.create(:name=> 'Mojito',
+							# :description=>''
+							:preparation=>'Place mint leaves in bottom of glass. Add crushed ice, Captain Morgan Original Spiced Rum, sugar, and lime juice, and muddle. Add soda water and garnish with mint leaves.'
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Mojito").id,
+											ingredient_id: Ingredient.find_by_name("Rum").id,
+											amount: "1.25 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Mojito").id,
+											ingredient_id: Ingredient.find_by_name("Lime Juice").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Mojito").id,
+											ingredient_id: Ingredient.find_by_name("Soda").id,
+											amount: "2 oz"
+											)
+
+Recipe.create(:name=> 'Mudslide',
+							# :description=>''
+							:preparation=>"Pour hershey's chocolate syrup around the inside rim of a rocks glass. Fill with ice, add ingredients, and serve."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Mudslide").id,
+											ingredient_id: Ingredient.find_by_name("Bailey's").id,
+											amount: "1.5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Mudslide").id,
+											ingredient_id: Ingredient.find_by_name("Kahlua").id,
+											amount: ".5 oz"
+											)
+
+Recipe.create(:name=> 'Old Fashioned',
+							# :description=>''
+							:preparation=>"Combine the sugar cube, bitters, and 1 tsp. water in an old-fashioned glass. Muddle well, add blended whiskey, and stir. Add a twist of lemon peel and ice cubes. Add slices of orange and lemon and top with the cherry. Serve with a swizzle stick."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Old Fashioned").id,
+											ingredient_id: Ingredient.find_by_name("Bourbon").id,
+											amount: "2 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Old Fashioned").id,
+											ingredient_id: Ingredient.find_by_name("Angosturas Bitters").id,
+											amount: "1 dash"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Old Fashioned").id,
+											ingredient_id: Ingredient.find_by_name("Lemon").id,
+											amount: "1 slice"
+											)
+
+Recipe.create(:name=> 'Orgasm',
+							# :description=>''
+							:preparation=>"Shake all ingredients with ice, strain into a chilled cocktail glass, and serve."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Orgasm").id,
+											ingredient_id: Ingredient.find_by_name("Creme de Cacao").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Orgasm").id,
+											ingredient_id: Ingredient.find_by_name("Amaretto").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Orgasm").id,
+											ingredient_id: Ingredient.find_by_name("Triple Sec").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Orgasm").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Orgasm").id,
+											ingredient_id: Ingredient.find_by_name("Cream").id,
+											amount: "1 oz"
+											)
+
+Recipe.create(:name=> 'Purple Hooter',
+							# :description=>''
+							:preparation=>"Pour ingredients into a stainless steel shaker over ice. Shake until ice cold. Strain into a large shot glass, and serve."
+							# :avatar=>''
+							)
+IngredientList.create(recipe_id: Recipe.find_by_name("Purple Hooter").id,
+											ingredient_id: Ingredient.find_by_name("Vodka").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Purple Hooter").id,
+											ingredient_id: Ingredient.find_by_name("Chambord").id,
+											amount: ".5 oz"
+											)
+IngredientList.create(recipe_id: Recipe.find_by_name("Purple Hooter").id,
+											ingredient_id: Ingredient.find_by_name("7-up").id,
+											amount: "1 splash"
 											)
 # r.ingredients << Ingredient.find_by_name("Amaretto")
 # r.ingredients << Ingredient.find_by_name("Sour Mix")
