@@ -4,12 +4,30 @@
 
 .container
 	.row
-		- @recipes.each do |i|
-			.col-xs-6.col-md-3
-				.well
-					%h3.recipe_text= i.name
-					/ .panel-body
-					/ 	=link_to(image_tag(i.avatar, :class => "thumbnail"), user_recipes_path(:id =>i.id), :method => :post)
+		- @recipes.each do |r|
+			.col-md-6
+				.panel.panel-success
+					%h3.panel-title.recipe-text= r.name
+					.panel-body
+						%p.recipe-text= r.preparation
+						%ul.list-group
+							-r.ingredient_lists.each do |i|
+								%li.list-group-item.recipe-text
+									= i.ingredient.name
+									= i.amount
+
+
+
+
+/ 	=link_to(image_tag(r.avatar, :class => "thumbnail"), user_recipes_path(:id =>r.id), :method => :post)f
+
+
+/ .col-xs-6.col-md-3
+/ 	.panel.panel-success
+/ 		.panel-heading
+/ 			%h3.panel-title= i.name
+/ 		.panel-body
+/ 			=link_to(image_tag(i.avatar, :class => "thumbnail"), user_mixer_path(:id =>i.id), :method => :delete)
 //
 / user_liquors = current_user.ingredients.liquors
 / liquors = Ingredient.liquors
