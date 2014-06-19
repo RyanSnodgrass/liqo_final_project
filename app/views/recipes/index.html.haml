@@ -7,7 +7,7 @@
 		- @recipes.each do |i|
 			.col-xs-6.col-md-3
 				.well
-					%h3= i.name
+					%h3.recipe_text= i.name
 					/ .panel-body
 					/ 	=link_to(image_tag(i.avatar, :class => "thumbnail"), user_recipes_path(:id =>i.id), :method => :post)
 //

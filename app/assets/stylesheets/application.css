@@ -64,3 +64,6 @@
 .splashheader {
   text-align: center;
 }
+.recipe_text {
+  color: darkslategrey !important;
+ }

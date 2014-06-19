@@ -177,7 +177,7 @@ Ingredient.create(:name=>'Amaretto',
 Ingredient.create(:name=>"Bailey's", 
 									:i_type=>'liqueur', 
 									:description=> "Amaretto is an almond flavoured italian liqueur made with apricot pits.",
-									:avatar=>'liqueurs/amaretto.gif')
+									:avatar=>'liqueurs/baileys.gif')
 Ingredient.create(:name=>'Blue Curacao', 
 									:i_type=>'liqueur', 
 									:description=> "Blue Curacao is a sweet blue liqueur, distilled and flavored from the dried peel of bitter oranges. It can also contain distillates of lemons and curacao fruit, sugar and wine. The Caribbean island of Curacao is host to much of the fruit used in these liqueurs.",
@@ -253,11 +253,11 @@ Ingredient.create(:name=>'Triple Sec',
 Ingredient.create(:name=>'Sweet Vermouth', 
 									:i_type=>'liqueur', 
 									:description=> "",
-									:avatar=>'')
+									:avatar=>'liqueurs/sweet_vermouth.gif')
 Ingredient.create(:name=>'Dry Vermouth', 
 									:i_type=>'liqueur', 
 									:description=> "",
-									:avatar=>'')
+									:avatar=>'liqueurs/dry_vermouth.gif')
 
 #########################
 ######## Recipes ########
