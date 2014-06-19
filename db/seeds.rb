@@ -1,11 +1,15 @@
-# i = Ingredient.create
-# i.name = 'Rum'
-# i.i_type = 'liquor'
-# i.description = 'Rum is a distilled alcoholic beverage made from sugarcane byproducts, such as molasses, or directly from sugarcane juice, by a process of fermentation and distillation. The distillate, a clear liquid, is then usually aged in oak barrels. Rum can be referred to in Spanish by descriptors such as ron viejo ("old rum") and ron anejo ("aged rum").'
-# i.avatar.store!(File.open(File.join(Rails.root, '/public/images/liquors/beefeater_gin.jpg')))
-# i.save
 
 Ingredient.delete_all
+Recipe.delete_all
+@u = User.all
+@u.each do |i|
+	i.ingredients.delete_all
+end
+
+# IngredientList.delete_all
+# IngredientUser.delete_all
+# IngredientRecipe.delete_all
+
 
 ############################
 ######## Liquors ###########
@@ -77,34 +81,34 @@ Ingredient.create(:name=>'Cream',
 									:i_type=>'mixer', 
 									:description=> "The part of the cow's milk rich in fat which has been seperated by means of centrifugal force or otherwise.",
 									:avatar=>'mixers/cream.gif')
-Ingredient.create(:name=>'Eggs', 
-									:i_type=>'mixer', 
-									:description=> "They come from chickens. Like all ingredients- the more organic, the better tasting.",
-									:avatar=>'mixers/eggs.gif')
-Ingredient.create(:name=>'Ginger Ale', 
-									:i_type=>'mixer', 
-									:description=> "A ginger flavored carbonated soft drink.",
-									:avatar=>'mixers/ginger_ale.gif')
+# Ingredient.create(:name=>'Eggs', 
+# 									:i_type=>'mixer', 
+# 									:description=> "They come from chickens. Like all ingredients- the more organic, the better tasting.",
+# 									:avatar=>'mixers/eggs.gif')
+# Ingredient.create(:name=>'Ginger Ale', 
+# 									:i_type=>'mixer', 
+# 									:description=> "A ginger flavored carbonated soft drink.",
+# 									:avatar=>'mixers/ginger_ale.gif')
 Ingredient.create(:name=>'Grenadine', 
 									:i_type=>'mixer', 
 									:description=> "Grenadine is a strong red syrup made from red currants and pomegranates. It is a useful ingredient for many cocktails - acting as both a colouring and sweetener.",
 									:avatar=>'mixers/grenadine.gif')
-Ingredient.create(:name=>'Half and Half', 
-									:i_type=>'mixer', 
-									:description=> "",
-									:avatar=>'mixers/grenadine.gif')
-Ingredient.create(:name=>'Ice Cream', 
-									:i_type=>'mixer', 
-									:description=> "A cold dessert made with a combination of milk products, sweeteners and flavorings.",
-									:avatar=>'mixers/ice_cream.gif')
+# Ingredient.create(:name=>'Half and Half', 
+# 									:i_type=>'mixer', 
+# 									:description=> "",
+# 									:avatar=>'mixers/grenadine.gif')
+# Ingredient.create(:name=>'Ice Cream', 
+# 									:i_type=>'mixer', 
+# 									:description=> "A cold dessert made with a combination of milk products, sweeteners and flavorings.",
+# 									:avatar=>'mixers/ice_cream.gif')
 Ingredient.create(:name=>'Milk', 
 									:i_type=>'mixer', 
 									:description=> "Milk contains protein, calcium, phosphorus, potassium, sodium, iodine, vitamins A and D amongst others, lactose (milk sugar) and riboflavin. Always store milk in a refrigerator milk from the offset. Milk readily absorbs flavors so always close milk cartons or other containers tightly. The storage life of milk is reduced greatly when allowed to sit out at room temperature for 30 minutes or more, as it would if put in a pitcher for serving.",
 									:avatar=>'mixers/milk.gif')
-Ingredient.create(:name=>'Orange Bitters', 
-									:i_type=>'mixer', 
-									:description=> "A bitter liquor made from the dried peel of unripe sour or bitter oranges, steeped in gin or alcohol.",
-									:avatar=>'mixers/orange_bitters.gif')
+# Ingredient.create(:name=>'Orange Bitters', 
+# 									:i_type=>'mixer', 
+# 									:description=> "A bitter liquor made from the dried peel of unripe sour or bitter oranges, steeped in gin or alcohol.",
+# 									:avatar=>'mixers/orange_bitters.gif')
 Ingredient.create(:name=>'Sour Mix', 
 									:i_type=>'mixer', 
 									:description=> "Sweet and sour mix is a blend of lemon juice and syrup. It is often just refered to as sour mix, and is available at most liquor stores. To make your own, mix approx. eight ounces of lemon juice with two tablespoons of sugar.",
@@ -125,22 +129,26 @@ Ingredient.create(:name=>'Lemon Juice',
 									:i_type=>'mixer', 
 									:description=> "Normally best freshly squeezed, Lemon Juice is an essential ingredient for cocktails. To get the most juice out of a fresh lemon, bring it to room temperature and roll it under your palm against a hard surface before squeezing. Another method is to microwave them on high power for 30 seconds, let stand a couple of minutes before cutting and squeezing them.",
 									:avatar=>'mixers/lemon_juice.gif')
-Ingredient.create(:name=>'Sprite', 
+Ingredient.create(:name=>'Orange Juice', 
 									:i_type=>'mixer', 
-									:description=> "Sprite is a lemon-lime flavored carbonated soft drink produced by the Coca-Cola Company. It is caffeine free and contains no fat. Sprite has a taste similar to that of 7-Up. It is often common practice to substitute one for the other.",
-									:avatar=>'mixers/sprite.gif')
+									:description=> "",
+									:avatar=>'mixers/orange_juice.gif')
+# Ingredient.create(:name=>'Sprite', 
+# 									:i_type=>'mixer', 
+# 									:description=> "Sprite is a lemon-lime flavored carbonated soft drink produced by the Coca-Cola Company. It is caffeine free and contains no fat. Sprite has a taste similar to that of 7-Up. It is often common practice to substitute one for the other.",
+# 									:avatar=>'mixers/sprite.gif')
 Ingredient.create(:name=>'7-up', 
 									:i_type=>'mixer', 
 									:description=> "7-Up is a popular lemon-lime flavoured carbonated soft drink or soda dating back to the late 1920's. Although marginally less sweet or lemon-lime tasting, it has a very similar taste to Sprite. Substituting either one for the other is often common practice.",
 									:avatar=>'mixers/7up.gif')
-Ingredient.create(:name=>'Tea', 
-									:i_type=>'mixer', 
-									:description=> "A beverage made with tea leaves, water and normally milk and sugar.",
-									:avatar=>'mixers/tea.gif')
-Ingredient.create(:name=>'Coffee', 
-									:i_type=>'mixer', 
-									:description=> "A caffeine rich mixture of water and the seeds of berries of the coffee tree.",
-									:avatar=>'mixers/coffee.gif')
+# Ingredient.create(:name=>'Tea', 
+# 									:i_type=>'mixer', 
+# 									:description=> "A beverage made with tea leaves, water and normally milk and sugar.",
+# 									:avatar=>'mixers/tea.gif')
+# Ingredient.create(:name=>'Coffee', 
+# 									:i_type=>'mixer', 
+# 									:description=> "A caffeine rich mixture of water and the seeds of berries of the coffee tree.",
+# 									:avatar=>'mixers/coffee.gif')
 Ingredient.create(:name=>'Soda', 
 									:i_type=>'mixer', 
 									:description=> "Soda water is the common name for water which has been charged with carbon dioxide. It is also often refered to as Seltzer Water, Sparkling Water, and Club Soda.",
@@ -169,11 +177,11 @@ Ingredient.create(:name=>'Amaretto',
 Ingredient.create(:name=>"Bailey's", 
 									:i_type=>'liqueur', 
 									:description=> "Amaretto is an almond flavoured italian liqueur made with apricot pits.",
-									:avatar=>'liqueurs/amaretto.gif')
-Ingredient.create(:name=>'Blue Curacao', 
-									:i_type=>'liqueur', 
-									:description=> "Blue Curacao is a sweet blue liqueur, distilled and flavored from the dried peel of bitter oranges. It can also contain distillates of lemons and curacao fruit, sugar and wine. The Caribbean island of Curacao is host to much of the fruit used in these liqueurs.",
-									:avatar=>'liqueurs/blue_curacao.gif')
+									:avatar=>'liqueurs/baileys.gif')
+# Ingredient.create(:name=>'Blue Curacao', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "Blue Curacao is a sweet blue liqueur, distilled and flavored from the dried peel of bitter oranges. It can also contain distillates of lemons and curacao fruit, sugar and wine. The Caribbean island of Curacao is host to much of the fruit used in these liqueurs.",
+# 									:avatar=>'liqueurs/blue_curacao.gif')
 Ingredient.create(:name=>'Chambord', 
 									:i_type=>'liqueur', 
 									:description=> "A sweet red raspberry flavored french liqueur made from black-raspberries, honey, fruits and herbs.",
@@ -194,50 +202,50 @@ Ingredient.create(:name=>'Creme de Menthe',
 									:i_type=>'liqueur', 
 									:description=> "A sweet, white/green mint-flavored liqueur made from mint and spearmint.",
 									:avatar=>'liqueurs/creme_de_menthe.gif')
-Ingredient.create(:name=>'Frangelico', 
-									:i_type=>'liqueur', 
-									:description=> "A hazelnut flavored liqueur made primarily from the distillation of the infusion of toasted hazelnuts into alcohol and water. It is flavored with toasted coffee and cocoa, vanilla berries and rhubard root.",
-									:avatar=>'liqueurs/frangelico.gif')
+# Ingredient.create(:name=>'Frangelico', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "A hazelnut flavored liqueur made primarily from the distillation of the infusion of toasted hazelnuts into alcohol and water. It is flavored with toasted coffee and cocoa, vanilla berries and rhubard root.",
+# 									:avatar=>'liqueurs/frangelico.gif')
 Ingredient.create(:name=>'Godiva', 
 									:i_type=>'liqueur', 
 									:description=> "A rich chocolate liqueur based on godiva chocolates. Available as white chocolate or dark chocolate liqueurs.",
 									:avatar=>'liqueurs/godiva.gif')
-Ingredient.create(:name=>'Goldschlager', 
-									:i_type=>'liqueur', 
-									:description=> "A clear swiss cinnamon schnapps, containing 24 carrot gold leaf flakes.",
-									:avatar=>'liqueurs/goldschlager.gif')
-Ingredient.create(:name=>'Grand Marnier', 
-									:i_type=>'liqueur', 
-									:description=> "An orange flavored liqueur produced from a blend of cognac, orange peel, spices and vanilla.",
-									:avatar=>'liqueurs/grand_marnier.gif')
-Ingredient.create(:name=>'Jagermeister', 
-									:i_type=>'liqueur', 
-									:description=> "A herbal-flavored bitter german liqueur, made from a blend of over 50 herbs, fruits and spices.",
-									:avatar=>'liqueurs/jagermeister.gif')
+# Ingredient.create(:name=>'Goldschlager', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "A clear swiss cinnamon schnapps, containing 24 carrot gold leaf flakes.",
+# 									:avatar=>'liqueurs/goldschlager.gif')
+# Ingredient.create(:name=>'Grand Marnier', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "An orange flavored liqueur produced from a blend of cognac, orange peel, spices and vanilla.",
+# 									:avatar=>'liqueurs/grand_marnier.gif')
+# Ingredient.create(:name=>'Jagermeister', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "A herbal-flavored bitter german liqueur, made from a blend of over 50 herbs, fruits and spices.",
+# 									:avatar=>'liqueurs/jagermeister.gif')
 Ingredient.create(:name=>'Kahlua', 
 									:i_type=>'liqueur', 
 									:description=> "Kahlua is a rich, dark brown coffee liqueur made from the finest Mexican coffee, with fine cane spirits and a hint of vanilla. It also contains sugar, corn syrup and vodka, and has a thicker body than most other alcoholic beverages.Kahlua is the 2nd largest single liqueur brand worldwide. Although it wasn't introduced to America until 1962, it's history dates to pre-WWII.",
 									:avatar=>'liqueurs/kahlua.gif')
-Ingredient.create(:name=>'Midori', 
-									:i_type=>'liqueur', 
-									:description=> "Midori is a vibrant green, honeydew melon flavored liqueur launched in the US in 1978. It's high versatility and refreshing melon taste has made it an essential bar ingredient, used in world famous cocktails such as the Midori Margarita and Melonball. Produced in Mexico by Suntory, Midori Melon Liqueur is today available in more than 30 countries worldwide.",
-									:avatar=>'liqueurs/midori.gif')
-Ingredient.create(:name=>'Rumple Minze', 
-									:i_type=>'liqueur', 
-									:description=> "A strong peppermint-flavored german schnapps.",
-									:avatar=>'liqueurs/rumple_minze.gif')
-Ingredient.create(:name=>'Sambuca', 
-									:i_type=>'liqueur', 
-									:description=> "Sambuca is an anise-flavored liqueur, produced by the infusion of witch elder bush and licorice, sweetened with sugar and enhanced with a secret combination of herbs and spices. White Sambuca is the traditional and generally the more popular variety, having a mellower licorice taste and lighter body than that of black sambuca.",
-									:avatar=>'liqueurs/sambuca.gif')
+# Ingredient.create(:name=>'Midori', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "Midori is a vibrant green, honeydew melon flavored liqueur launched in the US in 1978. It's high versatility and refreshing melon taste has made it an essential bar ingredient, used in world famous cocktails such as the Midori Margarita and Melonball. Produced in Mexico by Suntory, Midori Melon Liqueur is today available in more than 30 countries worldwide.",
+# 									:avatar=>'liqueurs/midori.gif')
+# Ingredient.create(:name=>'Rumple Minze', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "A strong peppermint-flavored german schnapps.",
+# 									:avatar=>'liqueurs/rumple_minze.gif')
+# Ingredient.create(:name=>'Sambuca', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "Sambuca is an anise-flavored liqueur, produced by the infusion of witch elder bush and licorice, sweetened with sugar and enhanced with a secret combination of herbs and spices. White Sambuca is the traditional and generally the more popular variety, having a mellower licorice taste and lighter body than that of black sambuca.",
+# 									:avatar=>'liqueurs/sambuca.gif')
 Ingredient.create(:name=>'Southern Comfort', 
 									:i_type=>'liqueur', 
 									:description=> "Southern Comfort is a peach flavored bourbon liqueur. It is a traditional american spirit made from an infusion of peach and other flavorings (such as citrus and orange) into a bourbon base. It is available as both 100 proof (50 percent alcohol) and 76 proof (38 percent alcohol). Although nowadays produced in St. Louis, Missouri, the history and secret formula of Southern Comfort stretches back to 1874 where a M.W. Heron created it in his bar in New Orleans.",
 									:avatar=>'liqueurs/soco.gif')
-Ingredient.create(:name=>'Tia Maria', 
-									:i_type=>'liqueur', 
-									:description=> "A dark, medium-bodied coffee liqueur made from a fine blend of cane spirit, jamaican coffee, vanilla and sugar.",
-									:avatar=>'liqueurs/tia_maria.gif')
+# Ingredient.create(:name=>'Tia Maria', 
+# 									:i_type=>'liqueur', 
+# 									:description=> "A dark, medium-bodied coffee liqueur made from a fine blend of cane spirit, jamaican coffee, vanilla and sugar.",
+# 									:avatar=>'liqueurs/tia_maria.gif')
 Ingredient.create(:name=>'Triple Sec', 
 									:i_type=>'liqueur', 
 									:description=> "Triple sec (meaning 'Triple distilled') is a strong, sweet and colorless orange flavored liqueur. It is made from the dried peel of oranges found on Curacao, an island in the Caribbean. Curacao, Grand Marnier and Cointreau are popular triple sec's.",
@@ -245,17 +253,16 @@ Ingredient.create(:name=>'Triple Sec',
 Ingredient.create(:name=>'Sweet Vermouth', 
 									:i_type=>'liqueur', 
 									:description=> "",
-									:avatar=>'')
+									:avatar=>'liqueurs/sweet_vermouth.gif')
 Ingredient.create(:name=>'Dry Vermouth', 
 									:i_type=>'liqueur', 
 									:description=> "",
-									:avatar=>'')
+									:avatar=>'liqueurs/dry_vermouth.gif')
 
 #########################
 ######## Recipes ########
 #########################
-Recipe.delete_all
-IngredientList.delete_all
+
 
 Recipe.create(:name=> 'Amaretto Sour',
 							# :description=>''
@@ -302,7 +309,7 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Brandy Alexander").id,
 											amount: "1 oz"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Brandy Alexander").id,
-											ingredient_id: Ingredient.find_by_name("Half and Half").id,
+											ingredient_id: Ingredient.find_by_name("Cream").id,
 											amount: "1 oz"
 											)
 
@@ -519,7 +526,7 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
 											amount: "1 part"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
-											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											ingredient_id: Ingredient.find_by_name("White Tequila").id,
 											amount: "1 part"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Long Island Iced Tea").id,
@@ -549,7 +556,7 @@ Recipe.create(:name=> 'Margarita',
 							# :avatar=>''
 							)
 IngredientList.create(recipe_id: Recipe.find_by_name("Margarita").id,
-											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											ingredient_id: Ingredient.find_by_name("White Tequila").id,
 											amount: "1.5 oz"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Margarita").id,
@@ -621,7 +628,7 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Old Fashioned").id,
 											amount: "1 dash"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Old Fashioned").id,
-											ingredient_id: Ingredient.find_by_name("Lemon").id,
+											ingredient_id: Ingredient.find_by_name("Lemons").id,
 											amount: "1 slice"
 											)
 
@@ -764,7 +771,7 @@ Recipe.create(:name=> 'Tequila Sunrise',
 							# :avatar=>''
 							)
 IngredientList.create(recipe_id: Recipe.find_by_name("Tequila Sunrise").id,
-											ingredient_id: Ingredient.find_by_name("Tequila").id,
+											ingredient_id: Ingredient.find_by_name("Gold Tequila").id,
 											amount: "2 oz"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Tequila Sunrise").id,
