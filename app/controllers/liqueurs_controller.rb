@@ -27,6 +27,7 @@ class LiqueursController < ApplicationController
 		@liqueur = Ingredient.find(params[:id]) # match the liqueur in the db from the liqueur in the view
 		# @user = current_user
 		current_user.ingredients.delete @liqueur
+		remove_recipe(@liqueur)
 		redirect_to :back
 	end
 

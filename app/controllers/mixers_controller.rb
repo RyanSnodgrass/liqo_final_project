@@ -27,6 +27,7 @@ class MixersController < ApplicationController
 		@mixer = Ingredient.find(params[:id]) # match the mixer in the db from the mixer in the view
 		@user = current_user
 		@user.ingredients.delete @mixer
+		remove_recipe(@mixer)
 		redirect_to :back
 	end
 end

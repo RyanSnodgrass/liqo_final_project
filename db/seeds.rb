@@ -1,8 +1,14 @@
+
 Ingredient.delete_all
 Recipe.delete_all
-IngredientList.delete_all
-IngredientUser.delete_all
-IngredientRecipe.delete_all
+@u = User.all
+@u.each do |i|
+	i.ingredients.delete_all
+end
+
+# IngredientList.delete_all
+# IngredientUser.delete_all
+# IngredientRecipe.delete_all
 
 
 ############################

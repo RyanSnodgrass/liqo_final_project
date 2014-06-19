@@ -14,8 +14,6 @@ class LiquorsController < ApplicationController
 	def create
 		@liquor = Ingredient.find(params[:id]) # match the liquor in the db from the liquor in the view
 		@user = current_user # set the current user
-		# @user.ingredients.build
-		# debugger
 		@user.ingredients << @liquor
 		# debugger
 		redirect_to :back
@@ -28,6 +26,7 @@ class LiquorsController < ApplicationController
 		@liquor = Ingredient.find(params[:id]) # match the liquor in the db from the liquor in the view
 		@user = current_user
 		@user.ingredients.delete @liquor
+		remove_recipe(@liquor)
 		redirect_to :back
 	end
 

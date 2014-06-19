@@ -1,0 +1,17 @@
+.ingredientback
+= render 'nav_tabs'
+%br
+
+.container
+	.row
+		- @recipes.each do |i|
+			.col-xs-6.col-md-3
+				.well
+					%h3= i.name
+					/ .panel-body
+					/ 	=link_to(image_tag(i.avatar, :class => "thumbnail"), user_recipes_path(:id =>i.id), :method => :post)
+//
+/ user_liquors = current_user.ingredients.liquors
+/ liquors = Ingredient.liquors
+/ shared_liquors = user_liquors & liquors
+//
