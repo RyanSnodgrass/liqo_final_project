@@ -93,10 +93,10 @@ Ingredient.create(:name=>'Grenadine',
 									:i_type=>'mixer', 
 									:description=> "Grenadine is a strong red syrup made from red currants and pomegranates. It is a useful ingredient for many cocktails - acting as both a colouring and sweetener.",
 									:avatar=>'mixers/grenadine.gif')
-Ingredient.create(:name=>'Half and Half', 
-									:i_type=>'mixer', 
-									:description=> "",
-									:avatar=>'mixers/grenadine.gif')
+# Ingredient.create(:name=>'Half and Half', 
+# 									:i_type=>'mixer', 
+# 									:description=> "",
+# 									:avatar=>'mixers/grenadine.gif')
 Ingredient.create(:name=>'Ice Cream', 
 									:i_type=>'mixer', 
 									:description=> "A cold dessert made with a combination of milk products, sweeteners and flavorings.",
@@ -309,7 +309,7 @@ IngredientList.create(recipe_id: Recipe.find_by_name("Brandy Alexander").id,
 											amount: "1 oz"
 											)
 IngredientList.create(recipe_id: Recipe.find_by_name("Brandy Alexander").id,
-											ingredient_id: Ingredient.find_by_name("Half and Half").id,
+											ingredient_id: Ingredient.find_by_name("Cream").id,
 											amount: "1 oz"
 											)
 
