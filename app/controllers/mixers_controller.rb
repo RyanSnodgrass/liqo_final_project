@@ -17,7 +17,7 @@ class MixersController < ApplicationController
 		# debugger
 		@user.ingredients << @mixer
 		# debugger
-		redirect_to :back
+		redirect_to user_mixers_path(:anchor => "mixer_#{@mixer.id}")
 	end
 
 	# matches the clicked mixer to the db,
@@ -28,6 +28,6 @@ class MixersController < ApplicationController
 		@user = current_user
 		@user.ingredients.delete @mixer
 		remove_recipe(@mixer)
-		redirect_to :back
+		redirect_to user_mixers_path(:anchor => "mixer_#{@mixer.id}")
 	end
 end

@@ -17,7 +17,8 @@ class LiqueursController < ApplicationController
 		# debugger
 		current_user.ingredients << @liqueur
 		# debugger
-		redirect_to :back
+		redirect_to user_liqueurs_path(:anchor => "liqueur_#{@liqueur.id}")
+
 	end
 
 	# matches the clicked liqueur to the db,
@@ -28,7 +29,7 @@ class LiqueursController < ApplicationController
 		# @user = current_user
 		current_user.ingredients.delete @liqueur
 		remove_recipe(@liqueur)
-		redirect_to :back
+		redirect_to user_liqueurs_path(:anchor => "liqueur_#{@liqueur.id}")
 	end
 
 	def ingredient_params

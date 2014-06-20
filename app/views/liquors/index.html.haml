@@ -7,7 +7,7 @@
 		- @liquors.each do |i|
 			- if current_user.ingredients.liquors.include?(i)
 				.col-xs-6.col-md-3
-					.panel.panel-default.panel-winning
+					.panel.panel-default.panel-winning{id: "liquor_#{i.id}"}
 						.panel-heading
 							%h3.panel-title= i.name
 						.panel-body
@@ -17,7 +17,7 @@
 			
 			- else
 				.col-xs-6.col-md-3
-					.panel.panel-default#panel-back
+					.panel.panel-default.panel-back{id: "liquor_#{i.id}"}
 						.panel-heading.panel-front-hf
 							%h3.panel-title= i.name
 						.panel-body.panel-front-body
