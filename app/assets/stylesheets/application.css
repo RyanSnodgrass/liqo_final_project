@@ -87,7 +87,7 @@
   opacity: .6;
   background-color: lightgrey !important;
  }
-#panel-winning {
+.panel-winning {
   box-shadow: 5px 7px 6px #4C4A4A;
 }
 
