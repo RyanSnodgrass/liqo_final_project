@@ -9,10 +9,10 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *= require_tree .
- *= require_self
  *= bootstrap
  *= main
+ *= require_tree .
+ *= require_self
  */
 .splashback {
   background: url("cocktail-final_blur.jpg") no-repeat center center fixed; 
@@ -53,7 +53,7 @@
   }
 }
 .thumby-text {
-  color: gray !important; 
+  color: gray; 
 }
 .logged-header {
   color: #E6E4E4;
@@ -67,3 +67,27 @@
 .recipe-text {
   color: darkslategrey !important;
  }
+ .body-success {
+  background-color: red;
+ }
+#panel-back {
+/*  opacity: .75;
+    box-shadow: 2px 2px 6px #4C4A4A;*/
+  /*box-shadow: 5px 7px 6px #4C4A4A;*/
+  background-color: lightgrey;
+ }
+.panel-front-body {
+  opacity: .4;
+  background-color: whitesmoke;
+  /*box-shadow: 5px 7px 6px #4C4A4A;*/
+  /*background-color: purple;*/
+  
+ }
+.panel-front-hf {
+  opacity: .6;
+  background-color: lightgrey !important;
+ }
+#panel-winning {
+  box-shadow: 5px 7px 6px #4C4A4A;
+}
+

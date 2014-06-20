@@ -5434,6 +5434,7 @@ a.list-group-item:focus {
 
 .panel-default {
   border-color: #dddddd;
+  /*box-shadow: 5px 7px 6px #4C4A4A;*/
 }
 
 .panel-default > .panel-heading {

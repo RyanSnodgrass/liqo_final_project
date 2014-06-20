@@ -7,10 +7,10 @@
 		- @liquors.each do |i|
 			- if current_user.ingredients.liquors.include?(i)
 				.col-xs-6.col-md-3
-					.panel.panel-success
+					.panel.panel-success{id: "liquor_#{i.id}"}
 						.panel-heading
 							%h3.panel-title= i.name
-						.panel-body
+						.panel-body.body-success
 							=link_to(image_tag(i.avatar, :class => "thumbnail"), user_liquor_path(:id =>i.id), :method => :delete)
 							
 						.panel-footer See more Info				

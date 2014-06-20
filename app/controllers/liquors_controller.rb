@@ -16,7 +16,8 @@ class LiquorsController < ApplicationController
 		@user = current_user # set the current user
 		@user.ingredients << @liquor
 		# debugger
-		redirect_to :back
+		# env["HTTP_REFERER"] += '#{liquor.id}'
+		redirect_to :back #liquor_#{@liquor.id}"
 	end
 
 	# matches the clicked liquor to the db,
